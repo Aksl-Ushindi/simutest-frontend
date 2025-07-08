@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: simutest-frontend
+    env: node
+    region: frankfurt
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npx serve dist
+    rootDir: .
+    autoDeploy: true
