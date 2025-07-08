@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: simulateur-ppi-frontend
+    env: static
+    repo: https://github.com/Aksl-Ushindi/simutest-front
+    branch: main
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    buildFilter:
+      paths:
+        - "src/**"
+        - "public/**"
+        - "vite.config.js"
+        - "package.json"
+    autoDeploy: true
