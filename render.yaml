@@ -1,9 +1,10 @@
 services:
   - type: web
-    name: simulateur-frontend
-    env: static
+    name: simutest-frontend
+    env: node
+    region: frankfurt
+    plan: free
     buildCommand: npm install && npm run build
-    staticPublishPath: dist
-    repo: https://github.com/Aksl-Ushindi/simutest-frontend
-    branch: main
+    startCommand: npm run start
+    rootDir: .
     autoDeploy: true
